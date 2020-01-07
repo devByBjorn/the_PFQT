@@ -1,0 +1,74 @@
+
+@media(max-width : 500px) {
+  #main-nav {
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem;
+
+    ul li {
+      padding: .75rem;
+    }
+  }
+
+  .buttons-container {
+    position: absolute;
+    bottom: 5rem;
+    right: 0;
+    left: 0;
+  }
+
+  #header {
+    &-qoutes {
+
+      #the-qoute {
+        font-size: 2.5rem;
+      }
+    }
+
+    &-favorites {      
+      #favorite-qoutes {
+        max-width: 90vw;
+        flex-direction: column; 
+
+        .button-container {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    &-created {
+
+      .form-qoutes-container {
+        form {
+          display: flex;
+          flex-direction: column;
+          max-width: 90vw;
+          margin-top: 7rem;
+        }
+
+        
+        #qoute-text {
+          max-width: 90vw;
+          height: 20rem;
+         
+  
+          ::placeholder {
+            line-height: 20rem;
+            background: $pulpDarkRed;
+          }
+        }
+  
+        #signature {
+          text-align: center;
+          padding: 1rem 0;
+         
+        }
+      }
+
+      #created-qoutes {
+        top: 68rem;
+        flex-direction: column;
+      }
+    }
+  }
+}

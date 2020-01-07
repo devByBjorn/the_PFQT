@@ -1,0 +1,58 @@
+
+#favorite-qoutes,
+#created-qoutes {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 0;
+  right: 0;
+  max-width: 70rem;
+  top: 60rem;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  color: $pulpWhite;
+  text-shadow: $shadowThin;
+  background: $pulpBlack;
+
+
+  span {
+    display: block;
+    padding: .5rem 0;
+  }
+
+  .qoute-container {
+    flex: 1;
+    justify-content: center;
+    margin: 0 2rem;
+    margin-top: 4rem;
+    padding: 2rem;
+    background: $pulpDarkRed;
+    box-shadow: 2px 2px 2px $pulpYellow;
+
+
+    button {
+      padding: .4rem;
+      background-color: rgba($pulpLightRed, .4);
+      border: none;
+  
+      &:hover {
+        cursor: pointer;
+        background-color: rgba($pulpLightYellow, .8);
+      }
+
+      &:active {
+        border-bottom: 1px solid darken($pulpWhite, 20%);
+      }
+    }
+  }
+}
+
+@media(min-width: 740px) {
+  #favorite-qoutes,
+  #created-qoutes {
+    .qoute-container {
+      flex: 1;
+      min-width: 40rem;
+    }
+  }
+}

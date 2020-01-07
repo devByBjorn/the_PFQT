@@ -1,0 +1,324 @@
+@import 'variables.scss';
+@import 'images.scss';
+@import 'utilities.scss';
+@import 'qoutesStyle';
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face  {
+  font-family: varSity;
+  src: url(/dist/VarsityTeam-Bold.otf)
+}
+
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: $pulpBlack;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+}
+
+// Navigation 
+
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  z-index: 1;
+  position: sticky;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  border-bottom: 1px solid rgba($pulpWhite, .5);
+
+  ul {
+    display: flex;
+  }
+
+  li {
+   padding: 1rem 1.5rem;
+  }
+
+  a {
+    color: $pulpWhite;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+   padding-bottom: .2rem;
+    font-weight: 600;
+
+    &:hover {
+      border-color: $pulpLightRed;
+    }
+
+    &.current {
+      border-color: $pulpYellow;
+    }
+  }
+
+  .fas {
+    font-size: 3rem;
+  }
+}
+
+
+
+#header {
+  // Home
+  &-home {
+    height: 100vh;
+    background: $home-bg-image no-repeat center center/cover;
+
+    #main-heading {
+      color: $pulpLightYellow;
+      font-size: 3rem;
+      margin-bottom: 15rem;
+      text-shadow: $shadow;
+      font-family: varSity;
+
+      span {
+        display: block;
+        
+
+        &:nth-child(1) {
+          font-size: 4rem;
+          margin-bottom: 2rem;
+        }
+    
+        &:nth-child(3),
+        &:nth-child(4) {
+          color: $pulpLightRed;
+          text-decoration: 1px underline $pulpWhite;
+        }
+      }
+    }
+
+    .get-qoute {
+      color: $pulpBlack;
+      background: $pulpWhite;
+      font-size: 1.5rem;
+      box-shadow: $shadow;
+
+      &:hover {
+        background: $pulpYellow;
+      }
+    }
+  }
+
+  // Qoutes
+  &-qoutes {
+    min-height: 100vh;
+    background: $qoutes-bg-image no-repeat center center/cover;
+    color: $pulpYellow;
+
+    #the-qoute {
+      font-size: 4rem;
+      color: $pulpWhite;
+      padding: 2rem;
+      min-height: 30rem;
+      max-width: 100rem;
+      margin: auto;
+      text-shadow: $shadow;
+
+      span {
+        display: block;
+        padding: 1rem 0;
+      }
+
+      // The signature name for qoute
+      :nth-child(2) {
+        text-transform: capitalize;
+        color: $pulpYellow;
+        font-size: 3rem;
+      }
+    }
+
+    #qoute-button {
+      background-color: $pulpDarkRed;
+      color: $pulpWhite;
+
+      &:hover {
+        background-color: $pulpLightRed;
+      }
+    }
+
+    #like-button {
+      background-color: $pulpYellow;
+      
+
+      &:hover {
+        background-color: $pulpLightYellow;
+      }
+
+      i {
+        margin: 0 1rem
+      }
+    }
+  }
+
+  // Favorites 
+  &-favorites {
+    height: 100vh;
+
+    .header-content {
+      position: absolute;
+      top: 15rem;
+      left: 0;
+      right: 0;
+
+      .line-break {
+        max-width: 18rem;
+      }
+    }
+
+    #favorites-heading {
+      font-size: 4rem;
+      padding-bottom: 2rem;
+      color: $pulpLightYellow;
+      text-shadow: $shadowLight;
+      font-family: varSity;
+    }
+
+    #favorite-qoutes {
+      top: 20rem;
+      color: $pulpWhite;
+
+      .favorite-qoute {
+        :last-child {
+          text-transform: capitalize;
+          color: $pulpWhite;
+          color: $pulpYellow;
+        }
+      }
+
+      .button-container {
+        float: left;
+      }
+    }
+  }
+
+  // Created
+  &-created {
+    // background-color: $pulpBlack;
+    .header-content {
+      position: absolute;
+      top: 15rem;
+      right: 0;
+      left: 0;
+      text-shadow: $shadow;
+      padding: 0 1rem;
+  
+      #write-heading {
+        font-size: 4rem;
+        padding-bottom: 2rem;
+        color: $pulpLightYellow;
+        text-shadow: $shadowLight;
+        font-family: varSity;
+      }
+
+      .line-break {
+        max-width: 40rem;
+      }
+    }
+
+    .form-qoutes-container {
+      form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        max-width: 40rem;
+        min-height: 25rem;
+        padding: 2rem;
+        margin: 2rem auto;
+        background: $pulpDarkRed;
+        box-shadow: 2px 2px 2px $pulpYellow;    
+
+        position: absolute;
+        top: 25rem;
+        right: 0;
+        left: 0;
+
+        #-created {
+          background-color: $pulpWhite;
+         padding: .1rem .2rem;
+        }
+  
+        #qoute-text {
+          width: 40rem;
+          height: 20rem;
+          line-height: 5rem;
+          text-align: center;
+          padding: 2rem;
+          background: $pulpDarkRed;
+          border: none;
+          color: $pulpWhite;
+          font-weight: bold;
+          font-size: 2rem;
+          text-shadow: $shadowThin;
+          resize: none;
+  
+          ::placeholder {
+            line-height: 20rem;
+            background: $pulpDarkRed;
+          }
+        }
+  
+        #signature {
+          text-align: center;
+          padding: 1rem 0;
+          border: none;
+          background: $pulpDarkRed;
+          color: $pulpYellow;
+          font-size: 1.5rem;
+          text-shadow: $shadowThin;
+          font-weight: bold;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    #created-qoutes {
+
+      .qoute-container {
+
+        
+        .created-qoute {
+          position: relative;
+        }
+  
+        .signature {
+         padding-bottom: 2rem;
+         color: $pulpYellow;
+        }
+  
+        .button-container {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}
+
+
+
+@import 'mediaQueries';

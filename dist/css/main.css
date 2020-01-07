@@ -1,0 +1,322 @@
+.container {
+  height: 100%;
+  display: flex;
+  margin: auto;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); }
+
+.header-contet {
+  max-width: 75rem; }
+
+.btn {
+  padding: 1rem .75rem;
+  margin: 1rem;
+  border: 1px solid #fff;
+  box-shadow: 2px 2px #000;
+  font-weight: 600; }
+  .btn:hover {
+    cursor: pointer; }
+  .btn:active {
+    box-shadow: 0px 2px #fff; }
+
+.line-break {
+  margin: 1rem auto;
+  max-width: 50rem;
+  border: 1px solid #ffc600;
+  box-shadow: 1px 1px #000; }
+
+#favorite-qoutes,
+#created-qoutes {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 0;
+  right: 0;
+  max-width: 70rem;
+  top: 60rem;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  color: #fff;
+  text-shadow: 1px 1px #000;
+  background: #000; }
+  #favorite-qoutes span,
+  #created-qoutes span {
+    display: block;
+    padding: .5rem 0; }
+  #favorite-qoutes .qoute-container,
+  #created-qoutes .qoute-container {
+    flex: 1;
+    justify-content: center;
+    margin: 0 2rem;
+    margin-top: 4rem;
+    padding: 2rem;
+    background: #971e15;
+    box-shadow: 2px 2px 2px #ffc600; }
+    #favorite-qoutes .qoute-container button,
+    #created-qoutes .qoute-container button {
+      padding: .4rem;
+      background-color: rgba(228, 54, 11, 0.4);
+      border: none; }
+      #favorite-qoutes .qoute-container button:hover,
+      #created-qoutes .qoute-container button:hover {
+        cursor: pointer;
+        background-color: rgba(255, 252, 51, 0.8); }
+      #favorite-qoutes .qoute-container button:active,
+      #created-qoutes .qoute-container button:active {
+        border-bottom: 1px solid #cccccc; }
+
+@media (min-width: 740px) {
+  #favorite-qoutes .qoute-container,
+  #created-qoutes .qoute-container {
+    flex: 1;
+    min-width: 40rem; } }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: varSity;
+  src: url(/dist/VarsityTeam-Bold.otf); }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  background-color: #000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style-type: none; }
+
+img {
+  width: 100%; }
+
+#main-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  z-index: 1;
+  position: sticky;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5); }
+  #main-nav ul {
+    display: flex; }
+  #main-nav li {
+    padding: 1rem 1.5rem; }
+  #main-nav a {
+    color: #fff;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    padding-bottom: .2rem;
+    font-weight: 600; }
+    #main-nav a:hover {
+      border-color: #e4360b; }
+    #main-nav a.current {
+      border-color: #ffc600; }
+  #main-nav .fas {
+    font-size: 3rem; }
+
+#header-home {
+  height: 100vh;
+  background: url(/dist/img/mia.png) no-repeat center center/cover; }
+  #header-home #main-heading {
+    color: #fffc33f3;
+    font-size: 3rem;
+    margin-bottom: 15rem;
+    text-shadow: 2px 2px #000;
+    font-family: varSity; }
+    #header-home #main-heading span {
+      display: block; }
+      #header-home #main-heading span:nth-child(1) {
+        font-size: 4rem;
+        margin-bottom: 2rem; }
+      #header-home #main-heading span:nth-child(3), #header-home #main-heading span:nth-child(4) {
+        color: #e4360b;
+        text-decoration: 1px underline #fff; }
+  #header-home .get-qoute {
+    color: #000;
+    background: #fff;
+    font-size: 1.5rem;
+    box-shadow: 2px 2px #000; }
+    #header-home .get-qoute:hover {
+      background: #ffc600; }
+
+#header-qoutes {
+  min-height: 100vh;
+  background: url(/dist/img/miaVincent.png) no-repeat center center/cover;
+  color: #ffc600; }
+  #header-qoutes #the-qoute {
+    font-size: 4rem;
+    color: #fff;
+    padding: 2rem;
+    min-height: 30rem;
+    max-width: 100rem;
+    margin: auto;
+    text-shadow: 2px 2px #000; }
+    #header-qoutes #the-qoute span {
+      display: block;
+      padding: 1rem 0; }
+    #header-qoutes #the-qoute :nth-child(2) {
+      text-transform: capitalize;
+      color: #ffc600;
+      font-size: 3rem; }
+  #header-qoutes #qoute-button {
+    background-color: #971e15;
+    color: #fff; }
+    #header-qoutes #qoute-button:hover {
+      background-color: #e4360b; }
+  #header-qoutes #like-button {
+    background-color: #ffc600; }
+    #header-qoutes #like-button:hover {
+      background-color: #fffc33f3; }
+    #header-qoutes #like-button i {
+      margin: 0 1rem; }
+
+#header-favorites {
+  height: 100vh; }
+  #header-favorites .header-content {
+    position: absolute;
+    top: 15rem;
+    left: 0;
+    right: 0; }
+    #header-favorites .header-content .line-break {
+      max-width: 18rem; }
+  #header-favorites #favorites-heading {
+    font-size: 4rem;
+    padding-bottom: 2rem;
+    color: #fffc33f3;
+    text-shadow: 1px 1px #e4360b;
+    font-family: varSity; }
+  #header-favorites #favorite-qoutes {
+    top: 20rem;
+    color: #fff; }
+    #header-favorites #favorite-qoutes .favorite-qoute :last-child {
+      text-transform: capitalize;
+      color: #fff;
+      color: #ffc600; }
+    #header-favorites #favorite-qoutes .button-container {
+      float: left; }
+
+#header-created .header-content {
+  position: absolute;
+  top: 15rem;
+  right: 0;
+  left: 0;
+  text-shadow: 2px 2px #000;
+  padding: 0 1rem; }
+  #header-created .header-content #write-heading {
+    font-size: 4rem;
+    padding-bottom: 2rem;
+    color: #fffc33f3;
+    text-shadow: 1px 1px #e4360b;
+    font-family: varSity; }
+  #header-created .header-content .line-break {
+    max-width: 40rem; }
+
+#header-created .form-qoutes-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 40rem;
+  min-height: 25rem;
+  padding: 2rem;
+  margin: 2rem auto;
+  background: #971e15;
+  box-shadow: 2px 2px 2px #ffc600;
+  position: absolute;
+  top: 25rem;
+  right: 0;
+  left: 0; }
+  #header-created .form-qoutes-container form #-created {
+    background-color: #fff;
+    padding: .1rem .2rem; }
+  #header-created .form-qoutes-container form #qoute-text {
+    width: 40rem;
+    height: 20rem;
+    line-height: 5rem;
+    text-align: center;
+    padding: 2rem;
+    background: #971e15;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2rem;
+    text-shadow: 1px 1px #000;
+    resize: none; }
+    #header-created .form-qoutes-container form #qoute-text ::placeholder {
+      line-height: 20rem;
+      background: #971e15; }
+  #header-created .form-qoutes-container form #signature {
+    text-align: center;
+    padding: 1rem 0;
+    border: none;
+    background: #971e15;
+    color: #ffc600;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px #000;
+    font-weight: bold;
+    text-decoration: underline; }
+
+#header-created #created-qoutes .qoute-container .created-qoute {
+  position: relative; }
+
+#header-created #created-qoutes .qoute-container .signature {
+  padding-bottom: 2rem;
+  color: #ffc600; }
+
+#header-created #created-qoutes .qoute-container .button-container {
+  display: flex;
+  justify-content: space-between; }
+
+@media (max-width: 500px) {
+  #main-nav {
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5rem; }
+    #main-nav ul li {
+      padding: .75rem; }
+  .buttons-container {
+    position: absolute;
+    bottom: 5rem;
+    right: 0;
+    left: 0; }
+  #header-qoutes #the-qoute {
+    font-size: 2.5rem; }
+  #header-favorites #favorite-qoutes {
+    max-width: 90vw;
+    flex-direction: column; }
+    #header-favorites #favorite-qoutes .button-container {
+      font-size: 1rem; }
+  #header-created .form-qoutes-container form {
+    display: flex;
+    flex-direction: column;
+    max-width: 90vw;
+    margin-top: 7rem; }
+  #header-created .form-qoutes-container #qoute-text {
+    max-width: 90vw;
+    height: 20rem; }
+    #header-created .form-qoutes-container #qoute-text ::placeholder {
+      line-height: 20rem;
+      background: #971e15; }
+  #header-created .form-qoutes-container #signature {
+    text-align: center;
+    padding: 1rem 0; }
+  #header-created #created-qoutes {
+    top: 68rem;
+    flex-direction: column; } }
