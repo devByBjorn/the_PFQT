@@ -1,5 +1,4 @@
 @import 'variables.scss';
-@import 'images.scss';
 @import 'utilities.scss';
 @import 'qoutesStyle';
 
@@ -85,7 +84,7 @@ img {
   // Home
   &-home {
     height: 100vh;
-    background: $home-bg-image no-repeat center center/cover;
+    background: url(/dist/img/mia.png) no-repeat center center/cover;
 
     #main-heading {
       color: $pulpLightYellow;
@@ -126,7 +125,6 @@ img {
   // Qoutes
   &-qoutes {
     min-height: 100vh;
-    background: $qoutes-bg-image no-repeat center center/cover;
     color: $pulpYellow;
 
     #the-qoute {
@@ -239,6 +237,7 @@ img {
       }
     }
 
+    // Textarea for creating qoutes
     .form-qoutes-container {
       form {
         display: flex;
@@ -249,17 +248,21 @@ img {
         min-height: 25rem;
         padding: 2rem;
         margin: 2rem auto;
-        background: $pulpDarkRed;
-        box-shadow: 2px 2px 2px $pulpYellow;    
+        border-top: 1px solid $pulpDarkRed;
 
         position: absolute;
         top: 25rem;
         right: 0;
         left: 0;
 
-        #-created {
-          background-color: $pulpWhite;
-         padding: .1rem .2rem;
+        // button
+        #add-created .btn{
+          background-color: darken($pulpWhite, 10%);
+          padding: .1rem .2rem;
+
+          &:hover {
+            background: $pulpYellow;
+          }
         }
   
         #qoute-text {
@@ -268,17 +271,18 @@ img {
           line-height: 5rem;
           text-align: center;
           padding: 2rem;
-          background: $pulpDarkRed;
+          background: transparent;
           border: none;
           color: $pulpWhite;
           font-weight: bold;
-          font-size: 2rem;
+          font-size: 3rem;
           text-shadow: $shadowThin;
           resize: none;
   
           ::placeholder {
             line-height: 20rem;
-            background: $pulpDarkRed;
+            background: rgba($pulpDarkRed, .4);
+            color: $pulpWhite;
           }
         }
   
@@ -286,28 +290,27 @@ img {
           text-align: center;
           padding: 1rem 0;
           border: none;
-          background: $pulpDarkRed;
+          background: transparent;
           color: $pulpYellow;
-          font-size: 1.5rem;
+          font-size: 2rem;
           text-shadow: $shadowThin;
           font-weight: bold;
-          text-decoration: underline;
         }
       }
     }
 
     #created-qoutes {
 
-      .qoute-container {
-
-        
+      .qoute-container {        
         .created-qoute {
           position: relative;
+          outline: none;
         }
   
         .signature {
          padding-bottom: 2rem;
          color: $pulpYellow;
+         
         }
   
         .button-container {
@@ -318,7 +321,6 @@ img {
     }
   }
 }
-
 
 
 @import 'mediaQueries';

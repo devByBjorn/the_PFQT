@@ -1,4 +1,3 @@
-
 #favorite-qoutes,
 #created-qoutes {
   display: flex;
@@ -24,20 +23,21 @@
     flex: 1;
     justify-content: center;
     margin: 0 2rem;
-    margin-top: 4rem;
-    padding: 2rem;
-    background: $pulpDarkRed;
-    box-shadow: 2px 2px 2px $pulpYellow;
-
+    margin-top: 5rem;
+    padding: 5rem 2rem;
+    border-top: 1px solid rgba($pulpDarkRed, .4);
 
     button {
       padding: .4rem;
-      background-color: rgba($pulpLightRed, .4);
+      background: transparent;
+      color: $pulpDarkRed;
       border: none;
-  
+      border-bottom: 1px solid transparent;
+
       &:hover {
         cursor: pointer;
-        background-color: rgba($pulpLightYellow, .8);
+        color: $pulpLightRed;
+        border-bottom: 1px solid $pulpDarkRed;
       }
 
       &:active {

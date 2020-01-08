@@ -25,13 +25,17 @@
   .btn:hover {
     cursor: pointer; }
   .btn:active {
-    box-shadow: 0px 2px #fff; }
+    box-shadow: 0px 2px #fff;
+    outline: none; }
 
 .line-break {
   margin: 1rem auto;
   max-width: 50rem;
   border: 1px solid #ffc600;
   box-shadow: 1px 1px #000; }
+
+.no-outline {
+  outline: none; }
 
 #favorite-qoutes,
 #created-qoutes {
@@ -56,19 +60,21 @@
     flex: 1;
     justify-content: center;
     margin: 0 2rem;
-    margin-top: 4rem;
-    padding: 2rem;
-    background: #971e15;
-    box-shadow: 2px 2px 2px #ffc600; }
+    margin-top: 5rem;
+    padding: 5rem 2rem;
+    border-top: 1px solid rgba(151, 30, 21, 0.4); }
     #favorite-qoutes .qoute-container button,
     #created-qoutes .qoute-container button {
       padding: .4rem;
-      background-color: rgba(228, 54, 11, 0.4);
-      border: none; }
+      background: transparent;
+      color: #971e15;
+      border: none;
+      border-bottom: 1px solid transparent; }
       #favorite-qoutes .qoute-container button:hover,
       #created-qoutes .qoute-container button:hover {
         cursor: pointer;
-        background-color: rgba(255, 252, 51, 0.8); }
+        color: #e4360b;
+        border-bottom: 1px solid #971e15; }
       #favorite-qoutes .qoute-container button:active,
       #created-qoutes .qoute-container button:active {
         border-bottom: 1px solid #cccccc; }
@@ -158,7 +164,6 @@ img {
 
 #header-qoutes {
   min-height: 100vh;
-  background: url(/dist/img/miaVincent.png) no-repeat center center/cover;
   color: #ffc600; }
   #header-qoutes #the-qoute {
     font-size: 4rem;
@@ -237,44 +242,46 @@ img {
   min-height: 25rem;
   padding: 2rem;
   margin: 2rem auto;
-  background: #971e15;
-  box-shadow: 2px 2px 2px #ffc600;
+  border-top: 1px solid #971e15;
   position: absolute;
   top: 25rem;
   right: 0;
   left: 0; }
-  #header-created .form-qoutes-container form #-created {
-    background-color: #fff;
+  #header-created .form-qoutes-container form #add-created .btn {
+    background-color: #e6e6e6;
     padding: .1rem .2rem; }
+    #header-created .form-qoutes-container form #add-created .btn:hover {
+      background: #ffc600; }
   #header-created .form-qoutes-container form #qoute-text {
     width: 40rem;
     height: 20rem;
     line-height: 5rem;
     text-align: center;
     padding: 2rem;
-    background: #971e15;
+    background: transparent;
     border: none;
     color: #fff;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 3rem;
     text-shadow: 1px 1px #000;
     resize: none; }
     #header-created .form-qoutes-container form #qoute-text ::placeholder {
       line-height: 20rem;
-      background: #971e15; }
+      background: rgba(151, 30, 21, 0.4);
+      color: #fff; }
   #header-created .form-qoutes-container form #signature {
     text-align: center;
     padding: 1rem 0;
     border: none;
-    background: #971e15;
+    background: transparent;
     color: #ffc600;
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-shadow: 1px 1px #000;
-    font-weight: bold;
-    text-decoration: underline; }
+    font-weight: bold; }
 
 #header-created #created-qoutes .qoute-container .created-qoute {
-  position: relative; }
+  position: relative;
+  outline: none; }
 
 #header-created #created-qoutes .qoute-container .signature {
   padding-bottom: 2rem;
