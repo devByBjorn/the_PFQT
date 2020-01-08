@@ -139,7 +139,7 @@ img {
 
 #header-home {
   height: 100vh;
-  background: url(/dist/img/mia.png) no-repeat center center/cover; }
+  background: url(../img/mia.png) no-repeat center center/cover; }
   #header-home #main-heading {
     color: #fffc33f3;
     font-size: 3rem;
