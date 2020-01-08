@@ -1,3 +1,4 @@
+// get qoutes from localStorage if any
 const getQoutes = (item) => {
   const qoutesJSON = localStorage.getItem(item)
   try {
@@ -10,6 +11,7 @@ const getQoutes = (item) => {
 let favoriteQoutes = getQoutes('favoriteQoutes')
 let createdQoutes = getQoutes('createdQoutes')
 
+// render qoutes
 const renderQoutes = (storageQoutes, id) => {
   document.querySelector(id).innerHTML = ''
   const page = window.location.hash.substring(1)
@@ -25,6 +27,7 @@ const renderQoutes = (storageQoutes, id) => {
   })
 }
 
+// Remove qoutes 
 const removeQoute = (storageQoutes, id) => {
   const storageIndex = storageQoutes.findIndex((storageQoute) => storageQoute.id === id)
   if (storageIndex > -1) {
