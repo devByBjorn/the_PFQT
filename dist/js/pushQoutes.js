@@ -110,7 +110,7 @@ butch.pushQoute('You were looking in the mirror and you decided you want some po
 const theWolf = new PulpFiction('the wolf')
 theWolf.pushQoute('Because you are a character doesn\'t meant the you have character.')
 theWolf.pushQoute('Now let\'s not start sucking each others dicks just yet.')
-theWolf.pushQoute('Toluca Lake. That]\'s thirty minutes away. I\'ll be there in ten.')
+theWolf.pushQoute('Toluca Lake. That\'s thirty minutes away. I\'ll be there in ten.')
 theWolf.pushQoute('I\'m Winston Wolfe. I solve problems.')
 theWolf.pushQoute('Rather you than me, gentlemen. Rather you than me.')
 theWolf.pushQoute('Pretty please, with sugar on top; clean the fucking car!')
