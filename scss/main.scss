@@ -270,6 +270,7 @@ img {
           }
         }
   
+        // textarea for typing own qoute
         #qoute-text {
           width: 40rem;
           height: 20rem;
@@ -291,6 +292,7 @@ img {
           }
         }
   
+        // name before adding
         #signature {
           text-align: center;
           padding: 1rem 0;
@@ -304,8 +306,8 @@ img {
       }
     }
 
+    // Qoutes format after added
     #created-qoutes {
-
       .qoute-container {        
         .created-qoute {
           position: relative;
@@ -313,9 +315,9 @@ img {
         }
   
         .signature {
-         padding-bottom: 2rem;
-         color: $pulpYellow;
-         
+          padding-top: 1rem;
+          padding-bottom: 2rem;
+           color: $pulpYellow;
         }
   
         .button-container {

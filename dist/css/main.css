@@ -241,6 +241,7 @@ img {
   outline: none; }
 
 #header-created #created-qoutes .qoute-container .signature {
+  padding-top: 1rem;
   padding-bottom: 2rem;
   color: #ffc600; }
 

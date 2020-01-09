@@ -1,4 +1,4 @@
-
+// Mobile portrait
 @media(max-width : 500px) {
   #main-nav {
     flex-direction: column;
@@ -11,16 +11,13 @@
   }
 
   #header {
-
     &-home {
       #main-heading {
         font-size: 2rem;
       }
     }
 
-
     &-qoutes {
-
       #the-qoute {
         font-size: 2.5rem;
 
@@ -36,7 +33,6 @@
     }
 
     &-favorites {  
-
       #favorite-qoutes {
         max-width: 90vw;
         flex-direction: column; 
@@ -48,7 +44,6 @@
     }
 
     &-created {
-
       .header-content {
         #write-heading {
           margin-top: 4rem;
@@ -95,7 +90,7 @@
   }
 }
 
-
+// mobile landscape
 @media(max-height: 500px) {
   #header {
 
@@ -114,7 +109,6 @@
     }
 
     &-created {
-         
       .form-qoutes-container {
         form {
           #qoute-text {
