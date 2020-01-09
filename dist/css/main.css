@@ -37,54 +37,6 @@
 .no-outline {
   outline: none; }
 
-#favorite-qoutes,
-#created-qoutes {
-  display: flex;
-  flex-wrap: wrap;
-  position: absolute;
-  left: 0;
-  right: 0;
-  max-width: 70rem;
-  top: 60rem;
-  margin: 0 auto;
-  font-size: 1.5rem;
-  color: #fff;
-  text-shadow: 1px 1px #000;
-  background: #000; }
-  #favorite-qoutes span,
-  #created-qoutes span {
-    display: block;
-    padding: .5rem 0; }
-  #favorite-qoutes .qoute-container,
-  #created-qoutes .qoute-container {
-    flex: 1;
-    justify-content: center;
-    margin: 0 2rem;
-    margin-top: 5rem;
-    padding: 5rem 2rem;
-    border-top: 1px solid rgba(151, 30, 21, 0.4); }
-    #favorite-qoutes .qoute-container button,
-    #created-qoutes .qoute-container button {
-      padding: .4rem;
-      background: transparent;
-      color: #971e15;
-      border: none;
-      border-bottom: 1px solid transparent; }
-      #favorite-qoutes .qoute-container button:hover,
-      #created-qoutes .qoute-container button:hover {
-        cursor: pointer;
-        color: #e4360b;
-        border-bottom: 1px solid #971e15; }
-      #favorite-qoutes .qoute-container button:active,
-      #created-qoutes .qoute-container button:active {
-        border-bottom: 1px solid #cccccc; }
-
-@media (min-width: 740px) {
-  #favorite-qoutes .qoute-container,
-  #created-qoutes .qoute-container {
-    flex: 1;
-    min-width: 40rem; } }
-
 * {
   margin: 0;
   padding: 0;
@@ -170,7 +122,6 @@ img {
     font-size: 4rem;
     color: #fff;
     padding: 2rem;
-    min-height: 30rem;
     max-width: 100rem;
     margin: auto;
     text-shadow: 2px 2px #000; }
@@ -181,17 +132,22 @@ img {
       text-transform: capitalize;
       color: #ffc600;
       font-size: 3rem; }
-  #header-qoutes #qoute-button {
-    background-color: #971e15;
-    color: #fff; }
-    #header-qoutes #qoute-button:hover {
-      background-color: #e4360b; }
-  #header-qoutes #like-button {
-    background-color: #ffc600; }
-    #header-qoutes #like-button:hover {
-      background-color: #fffc33f3; }
-    #header-qoutes #like-button i {
-      margin: 0 1rem; }
+  #header-qoutes .buttons-container {
+    position: absolute;
+    bottom: 15rem;
+    right: 0;
+    left: 0; }
+    #header-qoutes .buttons-container #qoute-button {
+      background-color: #971e15;
+      color: #fff; }
+      #header-qoutes .buttons-container #qoute-button:hover {
+        background-color: #e4360b; }
+    #header-qoutes .buttons-container #like-button {
+      background-color: #ffc600; }
+      #header-qoutes .buttons-container #like-button:hover {
+        background-color: #fffc33f3; }
+      #header-qoutes .buttons-container #like-button i {
+        margin: 0 1rem; }
 
 #header-favorites {
   height: 100vh; }
@@ -292,6 +248,54 @@ img {
   display: flex;
   justify-content: space-between; }
 
+#favorite-qoutes,
+#created-qoutes {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 0;
+  right: 0;
+  max-width: 70rem;
+  top: 60rem;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  color: #fff;
+  text-shadow: 1px 1px #000;
+  background: #000; }
+  #favorite-qoutes span,
+  #created-qoutes span {
+    display: block;
+    padding: .5rem 0; }
+  #favorite-qoutes .qoute-container,
+  #created-qoutes .qoute-container {
+    flex: 1;
+    justify-content: center;
+    margin: 0 2rem;
+    margin-top: 5rem;
+    padding: 5rem 2rem;
+    border-top: 1px solid rgba(151, 30, 21, 0.4); }
+    #favorite-qoutes .qoute-container button,
+    #created-qoutes .qoute-container button {
+      padding: .4rem;
+      background: transparent;
+      color: #971e15;
+      border: none;
+      border-bottom: 1px solid transparent; }
+      #favorite-qoutes .qoute-container button:hover,
+      #created-qoutes .qoute-container button:hover {
+        cursor: pointer;
+        color: #e4360b;
+        border-bottom: 1px solid #971e15; }
+      #favorite-qoutes .qoute-container button:active,
+      #created-qoutes .qoute-container button:active {
+        border-bottom: 1px solid #cccccc; }
+
+@media (min-width: 740px) {
+  #favorite-qoutes .qoute-container,
+  #created-qoutes .qoute-container {
+    flex: 1;
+    min-width: 40rem; } }
+
 @media (max-width: 500px) {
   #main-nav {
     flex-direction: column;
@@ -299,32 +303,51 @@ img {
     font-size: 1.5rem; }
     #main-nav ul li {
       padding: .75rem; }
-  .buttons-container {
-    position: absolute;
-    bottom: 5rem;
-    right: 0;
-    left: 0; }
+  #header-home #main-heading {
+    font-size: 2rem; }
   #header-qoutes #the-qoute {
     font-size: 2.5rem; }
+    #header-qoutes #the-qoute :nth-child(2) {
+      font-size: 2.5rem; }
+  #header-qoutes .buttons-container {
+    bottom: 5rem; }
   #header-favorites #favorite-qoutes {
     max-width: 90vw;
     flex-direction: column; }
     #header-favorites #favorite-qoutes .button-container {
       font-size: 1rem; }
+  #header-created .header-content #write-heading {
+    margin-top: 4rem; }
   #header-created .form-qoutes-container form {
     display: flex;
     flex-direction: column;
     max-width: 90vw;
-    margin-top: 7rem; }
-  #header-created .form-qoutes-container #qoute-text {
-    max-width: 90vw;
-    height: 20rem; }
-    #header-created .form-qoutes-container #qoute-text ::placeholder {
-      line-height: 20rem;
-      background: #971e15; }
+    margin-top: 4rem; }
+    #header-created .form-qoutes-container form #qoute-text {
+      max-width: 90vw;
+      font-size: 2rem; }
+      #header-created .form-qoutes-container form #qoute-text ::placeholder {
+        line-height: 20rem;
+        background: #971e15; }
+      #header-created .form-qoutes-container form #qoute-text #signature {
+        font-size: 2rem; }
   #header-created .form-qoutes-container #signature {
     text-align: center;
     padding: 1rem 0; }
   #header-created #created-qoutes {
     top: 68rem;
-    flex-direction: column; } }
+    flex-direction: column; }
+    #header-created #created-qoutes .qoute-container {
+      max-width: 90vw; } }
+
+@media (max-height: 500px) {
+  #header-qoutes #the-qoute {
+    font-size: 2rem; }
+    #header-qoutes #the-qoute :nth-child(2) {
+      font-size: 2rem; }
+  #header-qoutes .buttons-container {
+    bottom: 3rem; }
+  #header-created .form-qoutes-container form #qoute-text {
+    font-size: 2rem; }
+    #header-created .form-qoutes-container form #qoute-text #signature {
+      font-size: 2rem; } }

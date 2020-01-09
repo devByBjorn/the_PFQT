@@ -1,7 +1,6 @@
 @import 'variables.scss';
 @import 'utilities.scss';
-@import 'qoutesStyle';
-
+// mediaqueries and qouteStyles import on bottom of page
 
 * {
   margin: 0;
@@ -13,7 +12,6 @@
   font-family: varSity;
   src: url(/dist/VarsityTeam-Bold.otf)
 }
-
 
 html {
   font-size: 62.5%;
@@ -131,7 +129,6 @@ img {
       font-size: 4rem;
       color: $pulpWhite;
       padding: 2rem;
-      min-height: 30rem;
       max-width: 100rem;
       margin: auto;
       text-shadow: $shadow;
@@ -149,25 +146,32 @@ img {
       }
     }
 
-    #qoute-button {
-      background-color: $pulpDarkRed;
-      color: $pulpWhite;
+    .buttons-container {
+      position: absolute;
+      bottom: 15rem;
+      right: 0;
+      left: 0;
 
-      &:hover {
-        background-color: $pulpLightRed;
+      #qoute-button {
+        background-color: $pulpDarkRed;
+        color: $pulpWhite;
+  
+        &:hover {
+          background-color: $pulpLightRed;
+        }
       }
-    }
-
-    #like-button {
-      background-color: $pulpYellow;
-      
-
-      &:hover {
-        background-color: $pulpLightYellow;
-      }
-
-      i {
-        margin: 0 1rem
+  
+      #like-button {
+        background-color: $pulpYellow;
+        
+  
+        &:hover {
+          background-color: $pulpLightYellow;
+        }
+  
+        i {
+          margin: 0 1rem
+        }
       }
     }
   }
@@ -199,6 +203,7 @@ img {
       top: 20rem;
       color: $pulpWhite;
 
+      // name of character qouted
       .favorite-qoute {
         :last-child {
           text-transform: capitalize;
@@ -207,6 +212,7 @@ img {
         }
       }
 
+      // delete button
       .button-container {
         float: left;
       }
@@ -215,7 +221,6 @@ img {
 
   // Created
   &-created {
-    // background-color: $pulpBlack;
     .header-content {
       position: absolute;
       top: 15rem;
@@ -322,5 +327,5 @@ img {
   }
 }
 
-
+@import 'qoutesStyle';
 @import 'mediaQueries';
