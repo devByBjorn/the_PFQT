@@ -32,16 +32,10 @@
       background: transparent;
       color: $pulpDarkRed;
       border: none;
-      border-bottom: 1px solid transparent;
 
       &:hover {
         cursor: pointer;
         color: $pulpLightRed;
-        border-bottom: 1px solid $pulpDarkRed;
-      }
-
-      &:active {
-        border-bottom: 1px solid darken($pulpWhite, 20%);
       }
     }
   }

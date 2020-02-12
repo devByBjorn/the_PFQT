@@ -8,10 +8,10 @@
   box-sizing: border-box;
 }
 
-@font-face  {
-  font-family: varSity;
-  src: url(/dist/VarsityTeam-Bold.otf)
-}
+// @font-face  {
+//   font-family: varSity;
+//   src: url(/dist/VarsityTeam-Bold.otf)
+// }
 
 html {
   font-size: 62.5%;
@@ -59,7 +59,7 @@ img {
     color: $pulpWhite;
     text-transform: uppercase;
     border-bottom: 3px transparent solid;
-   padding-bottom: .2rem;
+    padding-bottom: .2rem;
     font-weight: 600;
 
     &:hover {
@@ -76,13 +76,11 @@ img {
   }
 }
 
-
-
 #header {
   // Home
   &-home {
     height: 100vh;
-    background: url(../img/mia.png) no-repeat center center/cover;
+    background: url(../img/mia.jpeg) no-repeat center center/cover;
 
     #main-heading {
       color: $pulpLightYellow;
