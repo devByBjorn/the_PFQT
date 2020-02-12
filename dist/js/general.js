@@ -20,7 +20,7 @@ const renderQoutes = (storageQoutes, id) => {
     if (page === 'favorites') {
       const favoriteQoute = favoriteQouteDOM(qoute)
       document.querySelector(id).appendChild(favoriteQoute)
-    } else if (page === 'create') {
+    } else if (page === 'created') {
       const createQoute = createdQouteDOM(qoute)
       document.querySelector(id).appendChild(createQoute)
     }

@@ -43,6 +43,7 @@ img {
 // Navigation 
 #main-nav {
   display: flex;
+  min-height: 5rem;
   justify-content: space-between;
   align-items: center;
   z-index: 1;
@@ -50,7 +51,8 @@ img {
   width: 100%;
   font-size: 1.1rem;
   padding: .5rem;
-  background: rgba(0,0,0,.95);
+  background: rgba(0,0,0,.75);
+  box-shadow: 2px 2px 10px rgb(70, 43, 43);
 
   ul {
     display: flex;
@@ -98,6 +100,7 @@ img {
       text-shadow: $shadow;
       font-family: varSity;
       margin-bottom: 5rem;
+      padding: 2rem;
       
       span {
         display: block;
@@ -129,11 +132,13 @@ img {
 
   // Qoutes
   &-qoutes {
-    min-height: 100vh;
-    color: $pulpYellow;
+
+    #main-nav {
+      box-shadow: 2px 2px 10px rgb(45, 58, 82);
+    }
 
     .container {
-      background: url(../img/jimmieWolf.png) no-repeat center center/cover;
+      background: url(../img/pumpkin-bunny.jpeg) no-repeat center center/cover;
     }
 
     #the-qoute {
@@ -162,7 +167,8 @@ img {
       #qoute-button {
         background-color: $pulpDarkRed;
         color: $pulpWhite;
-  
+        font-size: 1rem;
+
         &:hover {
           background-color: $pulpLightRed;
         }
@@ -170,7 +176,7 @@ img {
   
       #like-button {
         background-color: $pulpYellow;
-        
+        font-size: 1rem;
   
         &:hover {
           background-color: $pulpLightYellow;
@@ -185,7 +191,18 @@ img {
 
   // Favorites 
   &-favorites {
-   
+
+    .container {
+      min-height: 6000vh;
+      background: url(../img/jimmieWolf.png) center;
+    }
+
+    .overlay {
+      min-height: 6000vh;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+    
     #favorites-heading {
       font-size: $xl-size;
       padding-bottom: 2rem;
@@ -195,8 +212,20 @@ img {
     }
 
     #favorite-qoutes {
+      margin-top: 10rem;
+    
+      .qoute-container {
+        box-shadow: 2px 2px 10px rgb(70, 43, 43);
 
-      // name of character qouted
+        button {
+         color: rgb(112, 39, 39);
+        }
+
+        button:hover {
+          color: rgb(195, 44, 44)
+        }
+      }
+
       .favorite-qoute {
         :last-child {
           text-transform: capitalize;
@@ -208,28 +237,15 @@ img {
   }
 
   // Created
-  &-created {
-    .header-content {
-      position: absolute;
-      top: 15rem;
-      right: 0;
-      left: 0;
-      text-shadow: $shadow;
-      padding: 0 1rem;
-  
-      #write-heading {
-        font-size: $xl-size;
-        padding-bottom: 2rem;
-        color: $pulpLightYellow;
-        text-shadow: $shadowLight;
-        font-family: varSity;
-      }
-
-      .line-break {
-        max-width: 40rem;
-      }
+  &-creat {
+    #main-nav {
+      box-shadow: 2px 2px 10px rgb(17, 26, 26);
     }
-
+  
+    .container {
+      background: url(../img/miadancing.jpeg) no-repeat center center/cover;
+    }
+    
     // Textarea for creating qoutes
     .form-qoutes-container {
       form {
@@ -241,22 +257,8 @@ img {
         // min-height: 25rem;
         padding: $s-size;
         margin: 2rem auto;
-        border: 1px dotted rgba($pulpDarkRed, .4);
-
-        position: absolute;
-        top: 8rem;
-        right: 0;
-        left: 0;
-
-        // button
-        #add-created .btn{
-          background-color: darken($pulpWhite, 10%);
-          padding: .1rem .2rem;
-
-          &:hover {
-            background: $pulpYellow;
-          }
-        }
+        box-shadow: 2px 2px 10px rgb(17, 26, 26);
+        background: rgba(0,0,0,.9);
   
         // textarea for typing own qoute
         #qoute-text {
@@ -286,28 +288,63 @@ img {
           border: none;
           background: transparent;
           color: $pulpYellow;
-          font-size: $s-size;
+          font-size: 1rem;
           text-shadow: $shadowThin;
           font-weight: bold;
         }
+
+             // button
+       #add-created {
+        border: none;
+        background: rgba(81, 189, 189, 0.712);
+        color: $pulpWhite;
+        padding: .5rem .75rem;
+        transition: background .3s ease;
+
+        &:hover {
+          background: rgba(99, 240, 240, 0.712);
+        }
       }
+      }
+    }  
+  }
+
+  &-created {
+    #main-nav {
+      box-shadow: 2px 2px 10px rgb(40, 71, 73);
+    }
+  
+    .container {
+      min-height: 6000vh;
+      background: url(../img/vincentJules.png) center;
     }
 
-    // Qoutes format after added
-    #created-qoutes {
-      .qoute-container {        
-        margin: 2rem;
+    .overlay {
+      min-height: 6000vh;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
 
-        .created-qoute {
-          position: relative;
-          outline: none;
-        }
-  
+    #created-qoutes {
+      margin-top: 10rem;
+
+      .qoute-container {
+        box-shadow: 2px 2px 10px rgb(40, 71, 73);
+
         .signature {
-          padding-top: 1rem;
-          padding-bottom: 2rem;
-           color: $pulpYellow;
+          color: $pulpYellow;
+          font-size: 1rem;
         }
+
+        button {
+          color: rgb(75, 173, 173);
+    
+          &:hover {
+            color: rgb(96, 224, 224);
+          }
+        }
+
+
       }
     }
   }

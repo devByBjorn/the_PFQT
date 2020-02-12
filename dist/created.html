@@ -6,48 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/main.css">
-  <title>Create Qoutes</title>
+  <title>Your qoutes</title>
 </head>
 
 <body>
-  <div id="main-created" class="created">
 
+  <div id="main-created" class="favorites saved">
     <nav id="main-nav">
       <div>
         <ul>
-          <li><a href="index.html"><i class="fas fa-home"></i></a></li>
+          <li><a href="index.html"><i class="fas fa-home"></i></li>
         </ul>
       </div>
       <ul>
         <li><a href="qoutes.html">Qoutes</a></li>
         <li><a href="favorites.html#favorites">Favorites</a></li>
-        <li><a href="created.html#create" class="current">Create</a></li>
+        <li><a href="creat.html">Create</a></li>
+        <li><a href="created.html#created" class="current">Your qoutes</a></li>
+
         <li><a href="http://www.dailyscript.com/scripts/pulp_fiction.html" target="_blank"
             title="The Pulp Fiction Script. Opens in new window">The Script</a></li>
       </ul>
     </nav>
 
-    <div class="container text-center">
-      <div class="form-qoutes-container">
-        <form class="no-outline">
-          <textarea name="" id="qoute-text" class="no-outline" cols="30" rows="10"
-            placeholder='"Click here and start typing your own qoute"'></textarea>
-          <input type="text" id="signature" class="no-outline" placeholder="-Your name">
-          <button id="add-created" class="btn">Add</button>
-        </form>
+    <div class="container">
+      <div class="overlay">
+        <div id="created-qoutes"></div>
       </div>
-
-      <div id="created-qoutes">
-
-      </div>
-
     </div>
+  </div>
 
-    <script src="https://kit.fontawesome.com/9f0bfe41d9.js"></script>
-    <script src="uuidv4/uuidv4.js"></script>
-    <script src="js/general.js"></script>
-    <script src="js/createQoute.js"></script>
 
+
+  <script src="https://kit.fontawesome.com/9f0bfe41d9.js"></script>
+  <script src="uuidv4/uuidv4.js"></script>
+  <script src="js/general.js"></script>
+  <script src="js/createdQoutes.js"></script>
 </body>
 
 </html>

@@ -16,7 +16,6 @@ document.querySelector('#like-button').addEventListener('click', () => {
 
   const json = localStorage.getItem('favoriteQoutes')
   const qoutes = JSON.parse(json)
-  console.log(qoutes)
 
   if (qoutes) {
     qoutes.filter((qoute) => {

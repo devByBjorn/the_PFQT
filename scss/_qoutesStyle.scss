@@ -1,11 +1,10 @@
 #favorite-qoutes,
 #created-qoutes {
-  flex-wrap: wrap;
-  position: absolute;
-  left: 0;
-  right: 0;
-  max-width: 70rem;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 70rem;
+  max-width: 90vw;
+  margin:  auto;
   font-size: $s-size;
   color: $pulpWhite;
   text-shadow: $shadowThin;
@@ -20,10 +19,10 @@
     position: relative;
     flex: 1;
     text-align: center;
-    margin: 2rem;
     padding: 2rem;
-    border: 1px dotted $pulpDarkRed;
-    background: rgba(0,0,0,.8);
+    margin-bottom: 2rem;
+    background: rgba(0,0,0,.9);
+
 
     .create {
       margin-top: 5rem;
@@ -32,33 +31,29 @@
     button {
       padding: .4rem;
       background: transparent;
-      color: $pulpDarkRed;
       border: none;
+      transition: color .3s ease;
 
       &:hover {
         cursor: pointer;
-        color: $pulpLightRed;
       }
     }
 
     .delete {
       position: absolute;
-      bottom: 5px;
-      left: 15px;
+      top: 2px;
+      right: 15px;
+      font-size: $s-size;
+      padding: 0;
     }
 
     .save-edit {
       position: absolute;
       bottom: 5px;
-      right: 15px;
+      left: 15px;
+      font-size: 1rem;
     }
   }
 }
 
-#created-qoutes {
-  top: 40rem;
-}
 
-#favorite-qoutes {
-  top: 8rem
-}

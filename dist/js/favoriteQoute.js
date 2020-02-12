@@ -17,7 +17,7 @@ const favoriteQouteDOM = (qoute) => {
 
   // Remove button
   const removeButton = document.createElement('button')
-  removeButton.textContent = 'delete'
+  removeButton.innerHTML = '<span>&times;</span>'
   removeButton.setAttribute('class', 'delete')
   qouteEl.appendChild(removeButton)
   removeButton.addEventListener('click', () => {

@@ -1,5 +1,5 @@
 .container {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .overlay {
@@ -44,7 +44,7 @@
 
 .line-break {
   margin: 1rem auto;
-  max-width: 50rem;
+  max-width: 80vw;
   border: 1px solid $pulpYellow;
   box-shadow: $shadowThin;
 }
