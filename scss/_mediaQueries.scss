@@ -1,54 +1,39 @@
 // Mobile portrait
 @media(max-width : 500px) {
+
+  .line-break {
+    max-width: 80vw;
+  }
+  
   #main-nav {
-    flex-direction: column;
+   
     align-items: center;
-    font-size: 1.5rem;
 
     ul li {
       padding: .75rem;
     }
   }
 
-  #header {
-    &-home {
-      #main-heading {
-        font-size: 2rem;
-      }
-    }
-
+  #main {
     &-qoutes {
       #the-qoute {
-        font-size: 2.5rem;
-
-        :nth-child(2) {
-          font-size: 2.5rem;
-        }
+        margin-top: 5rem;
       }
-
       .buttons-container {
+        position: absolute;
         bottom: 5rem;
+        left: 0;
+        right: 0;
       }
-
     }
 
     &-favorites {  
       #favorite-qoutes {
-        max-width: 90vw;
-        flex-direction: column; 
-
-        .button-container {
-          font-size: 1rem;
-        }
+        margin-top: 5rem;
       }
     }
 
     &-created {
-      .header-content {
-        #write-heading {
-          margin-top: 4rem;
-        }
-      }
      
       .form-qoutes-container {
         form {
@@ -59,15 +44,10 @@
 
           #qoute-text {
             max-width: 90vw;
-            font-size: 2rem;
              
             ::placeholder {
               line-height: 20rem;
               background: $pulpDarkRed;
-            }
-
-            #signature {
-              font-size: 2rem;
             }
           }  
         }
@@ -79,7 +59,7 @@
       }
 
       #created-qoutes {
-        top: 68rem;
+        top:48rem;
         flex-direction: column;
         
         .qoute-container {
@@ -90,35 +70,40 @@
   }
 }
 
-// mobile landscape
+
 @media(max-height: 500px) {
-  #header {
+
+  :root {
+    font-size: calc(3px + 0.8vw);
+  }
+  
+  #main {
+
+    &-home {
+      .header-content {
+        margin-top: 5rem;
+      }
+    }
 
     &-qoutes {
+  
       #the-qoute {
-        font-size: 2rem;
-
-      :nth-child(2) {
-        font-size: 2rem;
-        }        
+        min-height: 0;
+        font-size: $s-size;
       }
 
       .buttons-container {
-        bottom: 3rem;
+        bottom: 0;
       }
     }
 
     &-created {
-      .form-qoutes-container {
-        form {
-          #qoute-text {
-            font-size: 2rem;
-      
-            #signature {
-              font-size: 2rem;
-            }
-          }  
-        }
+      .header-content {
+        top: 8rem
+      }
+
+      .form-qoutes-container form {
+        top: 15rem;
       }
     }
   }

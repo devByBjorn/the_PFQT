@@ -5,7 +5,7 @@ document.querySelector('#add-created').addEventListener('click', () => {
   const sign = document.querySelector('#signature').value
 
   const qouteId = uuidv4()
-  createdQoutes.push({
+  createdQoutes.unshift({
     qouteText: `"${text}"`,
     signature: `-${sign}`,
     id: qouteId
@@ -16,7 +16,7 @@ document.querySelector('#add-created').addEventListener('click', () => {
 })
 
 // DOM structure of qoute container
-function createdQouteDOM(qoute) {
+const createdQouteDOM = (qoute) => {
   // Container div
   const qouteEl = document.createElement('div')
   qouteEl.setAttribute('class', 'qoute-container')
@@ -34,15 +34,12 @@ function createdQouteDOM(qoute) {
   nameSignature.setAttribute('contenteditable', 'true')
   qouteEl.appendChild(nameSignature)
 
-  // Button container div
-  const buttonContainer = document.createElement('div')
-  buttonContainer.setAttribute('class', 'button-container')
-  qouteEl.appendChild(buttonContainer)
-
   // Remove button
   const removeButton = document.createElement('button')
   removeButton.textContent = 'delete'
-  buttonContainer.appendChild(removeButton)
+  removeButton.setAttribute('class', 'delete')
+  qouteEl.appendChild(removeButton)
+  // buttonContainer.appendChild(removeButton)
   removeButton.addEventListener('click', () => {
     removeQoute(createdQoutes, qoute.id)
     saveQoutes(createdQoutes, 'createdQoutes')
@@ -53,7 +50,7 @@ function createdQouteDOM(qoute) {
   const saveEditButton = document.createElement('button')
   saveEditButton.setAttribute('class', 'save-edit')
   saveEditButton.textContent = 'save edit'
-  buttonContainer.appendChild(saveEditButton)
+  qouteEl.appendChild(saveEditButton)
 
   // save and render contenteditable on save button click
   saveEditButton.addEventListener('click', (e) => {

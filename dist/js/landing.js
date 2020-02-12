@@ -18,7 +18,7 @@ document.querySelector('#like-button').addEventListener('click', () => {
   const qoutes = JSON.parse(json)
   console.log(qoutes)
 
-  if (qoutes.length !== 0) {
+  if (qoutes) {
     qoutes.filter((qoute) => {
       if (qoute.qouteText.includes(favorite)) {
         favoriteQoutes.pop({
@@ -27,14 +27,12 @@ document.querySelector('#like-button').addEventListener('click', () => {
         })
       }
     })
-  } else {
-    favoriteQoutes.push({
-      qouteText: favorite,
-      id: favoriteId
-    })
   }
 
-
+  favoriteQoutes.push({
+    qouteText: favorite,
+    id: favoriteId
+  })
 
   saveQoutes(favoriteQoutes, 'favoriteQoutes')
 })

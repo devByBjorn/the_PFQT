@@ -1,18 +1,15 @@
 #favorite-qoutes,
 #created-qoutes {
-  display: flex;
   flex-wrap: wrap;
   position: absolute;
   left: 0;
   right: 0;
   max-width: 70rem;
-  top: 60rem;
   margin: 0 auto;
-  font-size: 1.5rem;
+  font-size: $s-size;
   color: $pulpWhite;
   text-shadow: $shadowThin;
-  background: $pulpBlack;
-
+  word-break: break-all;
 
   span {
     display: block;
@@ -20,12 +17,17 @@
   }
 
   .qoute-container {
+    position: relative;
     flex: 1;
-    justify-content: center;
-    margin: 0 2rem;
-    margin-top: 5rem;
-    padding: 5rem 2rem;
-    border-top: 1px solid rgba($pulpDarkRed, .4);
+    text-align: center;
+    margin: 2rem;
+    padding: 2rem;
+    border: 1px dotted $pulpDarkRed;
+    background: rgba(0,0,0,.8);
+
+    .create {
+      margin-top: 5rem;
+    }
 
     button {
       padding: .4rem;
@@ -38,15 +40,25 @@
         color: $pulpLightRed;
       }
     }
+
+    .delete {
+      position: absolute;
+      bottom: 5px;
+      left: 15px;
+    }
+
+    .save-edit {
+      position: absolute;
+      bottom: 5px;
+      right: 15px;
+    }
   }
 }
 
-@media(min-width: 740px) {
-  #favorite-qoutes,
-  #created-qoutes {
-    .qoute-container {
-      flex: 1;
-      min-width: 40rem;
-    }
-  }
+#created-qoutes {
+  top: 40rem;
+}
+
+#favorite-qoutes {
+  top: 8rem
 }
