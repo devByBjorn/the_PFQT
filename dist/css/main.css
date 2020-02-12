@@ -127,8 +127,8 @@ img {
   z-index: 1;
   position: fixed;
   width: 100%;
-  font-size: 1.5rem;
-  padding: 1.5rem;
+  font-size: 1.1rem;
+  padding: .5rem;
   background: rgba(0, 0, 0, 0.95); }
   #main-nav ul {
     display: flex; }
@@ -146,7 +146,7 @@ img {
     #main-nav a.current {
       border-color: #ffc600; }
   #main-nav .fas {
-    font-size: 2.5rem; }
+    font-size: 1.5rem; }
 
 #main {
   height: 100vh; }
@@ -179,11 +179,11 @@ img {
     #main-qoutes .container {
       background: url(../img/jimmieWolf.png) no-repeat center center/cover; }
     #main-qoutes #the-qoute {
-      font-size: 3.5rem;
+      font-size: 2.5rem;
       color: #fff;
       padding: 2rem;
       max-width: 100rem;
-      min-height: 30rem;
+      min-height: 20rem;
       margin: auto;
       text-shadow: 2px 2px #000; }
       #main-qoutes #the-qoute span {
@@ -286,7 +286,7 @@ img {
   .line-break {
     max-width: 80vw; }
   #main-nav {
-    align-items: center; }
+    font-size: 1.5rem; }
     #main-nav ul li {
       padding: .75rem; }
   #main-qoutes #the-qoute {
