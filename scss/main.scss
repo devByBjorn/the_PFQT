@@ -1,6 +1,7 @@
 @import 'variables.scss';
 @import 'utilities.scss';
 @import 'qoutesStyle';
+@import 'keyframes';
 // mediaqueries and qouteStyles import on bottom of page
 
 * {
@@ -14,6 +15,8 @@
 //   src: url(/dist/VarsityTeam-Bold.otf)
 // }
 
+
+
 html {
   font-size: 62.5%;
 }
@@ -25,7 +28,7 @@ body {
 }
 
 :root {
-  font-size: calc(6px + 0.8vw);
+  font-size: calc(8px + 0.8vw);
 }
 
 a {
@@ -46,7 +49,7 @@ img {
   min-height: 5rem;
   justify-content: space-between;
   align-items: center;
-  z-index: 1;
+  z-index: 99;
   position: fixed;
   width: 100%;
   font-size: 1.1rem;
@@ -226,11 +229,13 @@ img {
         }
       }
 
+      // Signature
       .favorite-qoute {
         :last-child {
           text-transform: capitalize;
           color: $pulpWhite;
           color: $pulpYellow;
+          font-size: 1rem;
         }
       }
     }
@@ -274,6 +279,7 @@ img {
           font-size: $s-size;
           text-shadow: $shadowThin;
           resize: none;
+          word-break: break-all;
   
           ::placeholder {
             background: rgba($pulpDarkRed, .4);
@@ -327,6 +333,7 @@ img {
 
     #created-qoutes {
       margin-top: 10rem;
+      word-break: break-all;
 
       .qoute-container {
         box-shadow: 2px 2px 10px rgb(40, 71, 73);
@@ -334,6 +341,7 @@ img {
         .signature {
           color: $pulpYellow;
           font-size: 1rem;
+          padding: 1rem 0;
         }
 
         button {
@@ -343,8 +351,6 @@ img {
             color: rgb(96, 224, 224);
           }
         }
-
-
       }
     }
   }

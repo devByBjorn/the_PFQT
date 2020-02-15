@@ -1,3 +1,4 @@
+'use strict'
 // Generate new qoute on click
 const generateQoute = () => {
   const qoute = document.querySelector('#the-qoute')
@@ -17,22 +18,24 @@ document.querySelector('#like-button').addEventListener('click', () => {
   const json = localStorage.getItem('favoriteQoutes')
   const qoutes = JSON.parse(json)
 
-  if (qoutes) {
-    qoutes.filter((qoute) => {
-      if (qoute.qouteText.includes(favorite)) {
-        favoriteQoutes.pop({
-          qouteText: favorite,
-          id: favoriteId
-        })
-      }
-    })
+  // const duplicateExists = duplicate.length > 0
+
+  if (qoutes || !qoutes) {
+
+    const duplicate = qoutes.find((qoute) => qoute.qouteText === favorite)
+
+    if (duplicate) {
+      animation('#qoute-button', 'shake', '1s')
+      return
+    } else {
+      favoriteQoutes.unshift({
+        qouteText: favorite,
+        id: favoriteId
+      })
+      animation('#the-qoute', 'bump', '1s')
+      animation('.blink', 'blink', '2s')
+      saveQoutes(favoriteQoutes, 'favoriteQoutes')
+    }
   }
-
-  favoriteQoutes.push({
-    qouteText: favorite,
-    id: favoriteId
-  })
-
-  saveQoutes(favoriteQoutes, 'favoriteQoutes')
 })
 

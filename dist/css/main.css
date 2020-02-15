@@ -49,8 +49,7 @@
   margin: auto;
   font-size: 1.5rem;
   color: #fff;
-  text-shadow: 1px 1px #000;
-  word-break: break-all; }
+  text-shadow: 1px 1px #000; }
   #favorite-qoutes span,
   #created-qoutes span {
     display: block;
@@ -89,6 +88,26 @@
       left: 15px;
       font-size: 1rem; }
 
+@keyframes shake {
+  0% {
+    transform: rotate(3deg); }
+  33% {
+    transform: rotate(-3deg); }
+  66% {
+    transform: rotate(3deg); }
+  100% {
+    transform: rotate(0deg); } }
+
+@keyframes bump {
+  0% {
+    transform: translateY(-10px); }
+  100% {
+    transform: translateY(0px); } }
+
+@keyframes blink {
+  0% {
+    color: #e4360b; } }
+
 * {
   margin: 0;
   padding: 0;
@@ -103,7 +122,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
 
 :root {
-  font-size: calc(6px + 0.8vw); }
+  font-size: calc(8px + 0.8vw); }
 
 a {
   text-decoration: none; }
@@ -119,7 +138,7 @@ img {
   min-height: 5rem;
   justify-content: space-between;
   align-items: center;
-  z-index: 1;
+  z-index: 99;
   position: fixed;
   width: 100%;
   font-size: 1.1rem;
@@ -226,7 +245,8 @@ img {
     #main-favorites #favorite-qoutes .favorite-qoute :last-child {
       text-transform: capitalize;
       color: #fff;
-      color: #ffc600; }
+      color: #ffc600;
+      font-size: 1rem; }
   #main-creat #main-nav {
     box-shadow: 2px 2px 10px #111a1a; }
   #main-creat .container {
@@ -253,7 +273,8 @@ img {
       font-weight: bold;
       font-size: 1.5rem;
       text-shadow: 1px 1px #000;
-      resize: none; }
+      resize: none;
+      word-break: break-all; }
       #main-creat .form-qoutes-container form #qoute-text ::placeholder {
         background: rgba(151, 30, 21, 0.4);
         color: #fff; }
@@ -284,12 +305,14 @@ img {
     justify-content: flex-start;
     align-items: flex-start; }
   #main-created #created-qoutes {
-    margin-top: 10rem; }
+    margin-top: 10rem;
+    word-break: break-all; }
     #main-created #created-qoutes .qoute-container {
       box-shadow: 2px 2px 10px #284749; }
       #main-created #created-qoutes .qoute-container .signature {
         color: #ffc600;
-        font-size: 1rem; }
+        font-size: 1rem;
+        padding: 1rem 0; }
       #main-created #created-qoutes .qoute-container button {
         color: #4badad; }
         #main-created #created-qoutes .qoute-container button:hover {
@@ -300,20 +323,19 @@ img {
     max-width: 80vw; }
   #main-nav {
     flex-direction: column;
-    font-size: 1.2rem; }
+    font-size: 1rem; }
     #main-nav ul li {
-      padding: .75rem; }
+      padding: .75rem;
+      padding-top: 0; }
+      #main-nav ul li :first-child {
+        padding-top: .75rem; }
     #main-nav ul li a {
       white-space: none; }
-  #main-qoutes #the-qoute {
-    margin-top: 5rem; }
   #main-qoutes .buttons-container {
     position: absolute;
     bottom: 5rem;
     left: 0;
     right: 0; }
-  #main-favorites #favorite-qoutes {
-    margin-top: 5rem; }
   #main-creat .form-qoutes-container form {
     display: flex;
     flex-direction: column;

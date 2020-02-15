@@ -1,7 +1,6 @@
 const PulpFiction = function (name) {
   this.name = name
   this.qoute = []
-
   this.pushQoute = function (qoute) {
     return this.qoute.push(`<span>"${qoute}"</span><span>-${this.name}</span>`)
   }
