@@ -90,7 +90,6 @@ img {
 #main {
   height:  100vh;
 
-
   // Home
   &-home {
     .container {
@@ -99,7 +98,7 @@ img {
 
     #main-heading {
       color: $pulpYellow;
-      font-size: $xl-size;
+      font-size: $l-size;
       text-shadow: $shadow;
       font-family: varSity;
       margin-bottom: 5rem;
@@ -109,7 +108,7 @@ img {
         display: block;
       
         &:nth-child(1) {
-          font-size: $xl-size;
+          font-size: $l-size;
           margin-bottom: 2rem;
         }
     
@@ -148,7 +147,7 @@ img {
       font-size: $m-size;
       color: $pulpWhite;
       padding: 2rem;
-      max-width: 100rem;
+      max-width: 50rem;
       min-height: 20rem;
       margin: auto;
       text-shadow: $shadow;
@@ -216,6 +215,7 @@ img {
 
     #favorite-qoutes {
       margin-top: 10rem;
+      max-width: 50rem;
     
       .qoute-container {
         box-shadow: 2px 2px 10px rgb(70, 43, 43);
@@ -279,7 +279,7 @@ img {
           font-size: $s-size;
           text-shadow: $shadowThin;
           resize: none;
-          word-break: break-all;
+      
   
           ::placeholder {
             background: rgba($pulpDarkRed, .4);
@@ -333,6 +333,7 @@ img {
 
     #created-qoutes {
       margin-top: 10rem;
+      max-width: 50rem;
       word-break: break-all;
 
       .qoute-container {
