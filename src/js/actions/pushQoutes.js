@@ -1,3 +1,4 @@
+'use strict'
 const PulpFiction = function (name) {
   this.name = name
   this.qoute = []
@@ -7,7 +8,7 @@ const PulpFiction = function (name) {
 }
 
 // Push qoutes for each movie character. I need to learn how to create a database, this is time consuming. 
-const vincent = new PulpFiction('vincent')
+export const vincent = new PulpFiction('vincent')
 vincent.pushQoute('Aw, man. I shot Marvin in the face.')
 vincent.pushQoute('Marvin, what do you make of all of this?')
 vincent.pushQoute('Jules, did you ever hear the philosophy that once a man admits that he\'s wrong that he is immediately forgiven for all wrongdoings? Have you ever heard that?')
@@ -41,7 +42,7 @@ vincent.pushQoute('That\'s a bold statement.')
 vincent.pushQoute('Are you Jewish?')
 vincent.pushQoute('Yeah, but do you consider a dog to be a filthy animal?')
 
-const jules = new PulpFiction('jules')
+export const jules = new PulpFiction('jules')
 jules.pushQoute('Does he look like a bitch?')
 jules.pushQoute('Why the fuck did you do that?')
 jules.pushQoute('English, motherfucker! Do you speak it!')
@@ -91,11 +92,11 @@ jules.pushQoute('I wouldn\'t go so far as to call a dog filthy, but they\'re def
 jules.pushQoute('What is a miracle, Vincent?')
 
 
-const mia = new PulpFiction('mia')
+export const mia = new PulpFiction('mia')
 mia.pushQoute('Why do we feel it\'s necessary to yak about bullshit in order to be comfortable?')
 mia.pushQoute('That\'s when you know you found somebody special. When you can just shut the fuck up for a minute, and comfortably share silence.')
 
-const butch = new PulpFiction('butch')
+export const butch = new PulpFiction('butch')
 butch.pushQoute('That\'s how you\'re gonna beat \'em, Butch. They keep underestimating you.')
 butch.pushQoute('Zed\'s dead, baby. Zed\'s dead.')
 butch.pushQoute('It\'s a Chopper baby.')
@@ -106,7 +107,7 @@ butch.pushQoute('I\'m American, honey. Our names don\'t mean shit.')
 butch.pushQoute('I didn\'t call you a mongoloid, I called you a retard.')
 butch.pushQoute('You were looking in the mirror and you decided you want some pot?')
 
-const theWolf = new PulpFiction('the wolf')
+export const theWolf = new PulpFiction('the wolf')
 theWolf.pushQoute('Because you are a character doesn\'t mean the you have character.')
 theWolf.pushQoute('Now let\'s not start sucking each others dicks just yet.')
 theWolf.pushQoute('Toluca Lake. That\'s thirty minutes away. I\'ll be there in ten.')
@@ -116,7 +117,7 @@ theWolf.pushQoute('Pretty please, with sugar on top; clean the fucking car!')
 theWolf.pushQoute('How about you, Jimmy? Are you an oak man?')
 theWolf.pushQoute(' I think fast, I talk fast, and I need you two guys to act fast if you want to get out of this.')
 
-const marcellusWallace = new PulpFiction('marcellus wallace')
+export const marcellusWallace = new PulpFiction('marcellus wallace')
 marcellusWallace.pushQoute(' You see, this profession is filled to the brim with unrealistic motherfuckers. Motherfuckers who thought their ass would age like wine. If you mean it turns to vinegar, it does. If you mean it gets better with age, it don\'t.')
 marcellusWallace.pushQoute('Motherfucker!')
 marcellusWallace.pushQoute('I\'m gonna get medevil on your ass!')
@@ -126,11 +127,11 @@ marcellusWallace.pushQoute('Nah, man. I\'m pretty fuckin\' far from okay.')
 marcellusWallace.pushQoute('What now? I\'ll tell you what now. I\'m gonna call a couple of hard-pipe hittin\' niggas to go to work on the homes here with a pair of pliers and a blow-torch.')
 marcellusWallace.pushQoute('Oh, that \'what now\'. I tell you what now between me and you. There is no \'me and you\'. Not no more.')
 marcellusWallace.pushQoute('Two things: one, don\'t tell nobody about this. This shit is between me, you, and Mr. soon-to-be-living-the-rest-of-his-short-ass-life-in-agonizing-pain rapist here. It ain\'t nobody else\'s business. Two, you leave town tonight, right now, and when you gone, you stay gone, or you be gone.')
-marcellusWallace.pushQoute('You lost all your L.A. privileges. Deal?')
+marcellusWallace.pushQoute('You lost all your L.A. privileges.')
 marcellusWallace.pushQoute('Yeah, we cool.')
 marcellusWallace.pushQoute(' You ain\'t got no problem, Jules. I\'m on the motherfucker. Go back in there, chill them niggers out and wait for the Wolf who should be coming directly.')
 
-const jimmie = new PulpFiction('jimmie')
+export const jimmie = new PulpFiction('jimmie')
 jimmie.pushQoute('You don\'t have to tell me how good my coffee is okay, I\'m the one who buys it, I know how good it is..')
 jimmie.pushQoute('Oak\'s nice.')
 jimmie.pushQoute('There\'s nothing that you\'re gonna say that\'s gonna make me forget that I love my wife, is there?! ')

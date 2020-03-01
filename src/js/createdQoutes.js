@@ -1,6 +1,10 @@
+'use strict'
+import { saveQoutes, createdQoutes } from './actions/storageActions.js'
+import removeQoutes from './actions/removeQoutes'
+import renderQoutes from './actions/renderQoutes'
 
 // DOM structure of qoute container
-const createdQouteDOM = (qoute) => {
+export const createdQouteDOM = (qoute) => {
   // Container div
   const qouteEl = document.createElement('div')
   qouteEl.setAttribute('class', 'qoute-container')
@@ -25,9 +29,9 @@ const createdQouteDOM = (qoute) => {
   qouteEl.appendChild(removeButton)
 
   removeButton.addEventListener('click', () => {
-    removeQoute(createdQoutes, qoute.id)
+    removeQoutes(createdQoutes, qoute.id)
     saveQoutes(createdQoutes, 'createdQoutes')
-    renderQoutes(createdQoutes, '#created-qoutes')
+    renderQoutes(createdQoutes, createdQouteDOM, 'created-qoutes')
   })
 
   // Save button
@@ -40,7 +44,7 @@ const createdQouteDOM = (qoute) => {
   saveEditButton.addEventListener('click', (e) => {
     saveEdited(qouteEl, qoute)
     saveQoutes(createdQoutes, 'createdQoutes')
-    renderQoutes(createdQoutes, '#created-qoutes')
+    renderQoutes(createdQoutes, createdQouteDOM, 'created-qoutes')
   })
 
   // Default text for qoute if no value
@@ -66,10 +70,12 @@ const saveEdited = (element, qoute) => {
 window.addEventListener('storage', (e) => {
   if (e.key === 'createdQoutes') {
     createdQoutes = JSON.parse(e.newValue)
-    renderQoutes(createdQoutes, '#created-qoutes')
+    renderQoutes(createdQoutes, createdQouteDOM, 'created-qoutes')
   }
 })
 
 window.addEventListener('load', () => {
-  renderQoutes(createdQoutes, '#created-qoutes')
+  renderQoutes(createdQoutes, createdQouteDOM, 'created-qoutes')
 })
+
+export default createdQouteDOM

@@ -1,3 +1,8 @@
+'use strict'
+import { saveQoutes, favoriteQoutes } from './actions/storageActions'
+import removeQoutes from './actions/removeQoutes'
+import renderQoutes from './actions/renderQoutes'
+
 const favoriteQouteDOM = (qoute) => {
   // Container div
   const qouteEl = document.createElement('div')
@@ -21,9 +26,9 @@ const favoriteQouteDOM = (qoute) => {
   removeButton.setAttribute('class', 'delete')
   qouteEl.appendChild(removeButton)
   removeButton.addEventListener('click', () => {
-    removeQoute(favoriteQoutes, qoute.id)
+    removeQoutes(favoriteQoutes, qoute.id)
     saveQoutes(favoriteQoutes, 'favoriteQoutes')
-    renderQoutes(favoriteQoutes, '#favorite-qoutes')
+    renderQoutes(favoriteQoutes, favoriteQouteDOM, 'favorite-qoutes')
   })
 
   return qouteEl
@@ -32,10 +37,12 @@ const favoriteQouteDOM = (qoute) => {
 window.addEventListener('storage', (e) => {
   if (e.key === 'favoriteQoutes') {
     favoriteQoutes = JSON.parse(e.newValue)
-    renderQoutes(favoriteQoutes, '#favorite-qoutes')
+    renderQoutes(favoriteQoutes, favoriteQouteDOM, 'favorite-qoutes')
   }
 })
 
 window.addEventListener('load', () => {
-  renderQoutes(favoriteQoutes, '#favorite-qoutes')
+  renderQoutes(favoriteQoutes, favoriteQouteDOM, 'favorite-qoutes')
 })
+
+export default favoriteQouteDOM

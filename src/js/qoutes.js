@@ -1,8 +1,13 @@
 'use strict'
+import animation from './actions/animation'
+import { saveQoutes, favoriteQoutes } from './actions/storageActions'
+import qouteObj from './actions/qouteObj'
+import uuidv4 from '../uuidv4/uuidv4'
+
 // Generate new qoute on click
 const generateQoute = () => {
   const qoute = document.querySelector('#the-qoute')
-  qoute.innerHTML = qoutesObj.getRandomQoute().slice(-1)[0]
+  qoute.innerHTML = qouteObj.getRandomQoute().slice(-1)[0]
 }
 
 document.querySelector('#qoute-button').addEventListener('click', generateQoute)
@@ -18,24 +23,20 @@ document.querySelector('#like-button').addEventListener('click', () => {
   const json = localStorage.getItem('favoriteQoutes')
   const qoutes = JSON.parse(json)
 
-  // const duplicateExists = duplicate.length > 0
-
-  if (qoutes || !qoutes) {
-
+  if (qoutes) {
     const duplicate = qoutes.find((qoute) => qoute.qouteText === favorite)
 
     if (duplicate) {
       animation('#qoute-button', 'shake', '1s')
       return
-    } else {
-      favoriteQoutes.unshift({
-        qouteText: favorite,
-        id: favoriteId
-      })
-      animation('#the-qoute', 'bump', '1s')
-      animation('.blink', 'blink', '2s')
-      saveQoutes(favoriteQoutes, 'favoriteQoutes')
     }
   }
-})
 
+  favoriteQoutes.unshift({
+    qouteText: favorite,
+    id: favoriteId
+  })
+  animation('#the-qoute', 'bump', '1s')
+  animation('.blink', 'blink', '2s')
+  saveQoutes(favoriteQoutes, 'favoriteQoutes')
+})

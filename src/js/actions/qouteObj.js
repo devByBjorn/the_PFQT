@@ -1,6 +1,8 @@
 'use strict'
+import { vincent, jules, mia, theWolf, butch, marcellusWallace, jimmie } from './pushQoutes'
+
 // Add each name in format name.qoute to the allQoutes property, after pushing qoutes for that name. Like vincent.qoute
-const qoutesObj = {
+const qouteObj = {
   allQoutes: [jules.qoute.concat(vincent.qoute, mia.qoute, theWolf.qoute, butch.qoute, marcellusWallace.qoute, jimmie.qoute)],
   randomqoute: [],
   getShuffle() {
@@ -15,3 +17,4 @@ const qoutesObj = {
   }
 }
 
+export default qouteObj

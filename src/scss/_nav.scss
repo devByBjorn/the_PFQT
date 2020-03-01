@@ -1,0 +1,46 @@
+@import 'variables.scss';
+@import 'utilities.scss';
+
+// Navigation 
+#main-nav {
+  display: flex;
+  min-height: 5rem;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+  position: fixed;
+  width: 100%;
+  font-size: 1.1rem;
+  padding: .5rem;
+  background: rgba(0,0,0,.75);
+  box-shadow: 2px 2px 10px rgb(70, 43, 43);
+
+  ul {
+    display: flex;
+  }
+
+  li {
+   padding: .5rem 1rem;
+  }
+
+  a {
+    color: $pulpWhite;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    padding-bottom: .2rem;
+    font-weight: 600;
+    transition: border .3s ease;
+
+    &:hover {
+      border-color: $pulpLightRed;
+    }
+
+    &.current {
+      border-color: $pulpYellow;
+    }
+  }
+
+  .fas {
+    font-size: $s-size;
+  }
+}

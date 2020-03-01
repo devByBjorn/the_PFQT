@@ -1,0 +1,68 @@
+@import 'variables.scss';
+@import 'utilities.scss';
+
+#main {
+  // Qoutes - qputes.html
+  &-qoutes {
+
+    #main-nav {
+      box-shadow: 2px 2px 10px rgb(45, 58, 82);
+    }
+
+    .container {
+      background: url(../img/pumpkin-bunny.jpeg) no-repeat center center/cover;
+    }
+
+    #the-qoute {
+      font-size: $m-size;
+      color: $pulpWhite;
+      padding: 2rem;
+      max-width: 50rem;
+      min-height: 20rem;
+      margin: auto;
+      text-shadow: $shadow;
+
+      span {
+        display: block;
+        padding: 1rem 0;
+      }
+
+      // The signature name for qoute
+      :nth-child(2) {
+        text-transform: capitalize;
+        color: $pulpYellow;
+        font-size: $s-size;
+      }
+    }
+
+    .buttons-container {
+      position: absolute;
+      bottom: 2rem;
+      left: 0;
+      right: 0;
+
+      #qoute-button {
+        background-color: $pulpDarkRed;
+        color: $pulpWhite;
+        font-size: 1rem;
+
+        &:hover {
+          background-color: $pulpLightRed;
+        }
+      }
+  
+      #like-button {
+        background-color: $pulpYellow;
+        font-size: 1rem;
+  
+        &:hover {
+          background-color: $pulpLightYellow;
+        }
+  
+        i {
+          margin: 0 1rem
+        }
+      }
+    }
+  }
+}

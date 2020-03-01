@@ -1,0 +1,48 @@
+@import 'variables.scss';
+@import 'utilities.scss';
+
+#main {
+  height:  100vh;
+
+  // Home - index.html
+  &-home {
+    .container {
+      background: url(../img/mia.jpeg) no-repeat center center/cover;
+    }
+
+    #main-heading {
+      color: $pulpYellow;
+      font-size: $l-size;
+      text-shadow: $shadow;
+      font-family: varSity;
+      margin-bottom: 5rem;
+      padding: 2rem;
+      
+      span {
+        display: block;
+      
+        &:nth-child(1) {
+          font-size: $l-size;
+          margin-bottom: 2rem;
+        }
+    
+        &:nth-child(3),
+        &:nth-child(4) {
+          color: $pulpLightRed;
+          text-decoration: 1px underline $pulpWhite;
+        }
+      }
+    }
+
+    .get-qoute {
+      color: $pulpBlack;
+      background: $pulpWhite;
+      font-size: $s-size;
+      box-shadow: $shadow;
+
+      &:hover {
+        background: $pulpYellow;
+      }
+    }
+  }
+}

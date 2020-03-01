@@ -1,4 +1,5 @@
 
+'use strict'
 const animation = (el, animation, duration) => {
   const element = document.querySelector(el)
   if (!element.style.animation) {
@@ -10,3 +11,5 @@ const animation = (el, animation, duration) => {
     }, 30)
   }
 }
+
+export default animation

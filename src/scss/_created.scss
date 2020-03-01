@@ -1,0 +1,48 @@
+@import 'variables.scss';
+@import 'utilities.scss';
+@import 'qoutesStyle';
+@import 'keyframes';
+
+#main {
+  // Created - created.html page
+  &-created {
+    #main-nav {
+      box-shadow: 2px 2px 10px rgb(40, 71, 73);
+    }
+  
+    .container {
+      min-height: 6000vh;
+      background: url(../img/vincentJules.png) center;
+    }
+
+    .overlay {
+      min-height: 6000vh;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    #created-qoutes {
+      margin-top: 10rem;
+      max-width: 50rem;
+      word-break: break-all;
+
+      .qoute-container {
+        box-shadow: 2px 2px 10px rgb(40, 71, 73);
+
+        .signature {
+          color: $pulpYellow;
+          font-size: 1rem;
+          padding: 1rem 0;
+        }
+
+        button {
+          color: rgb(75, 173, 173);
+    
+          &:hover {
+            color: rgb(96, 224, 224);
+          }
+        }
+      }
+    }
+  }
+}
