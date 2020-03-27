@@ -144,7 +144,7 @@ img {
     background: url(../img/mia.jpeg) no-repeat center center/cover; }
   #main-home #main-heading {
     color: #ffc600;
-    font-size: 3.5rem;
+    font-size: 3rem;
     text-shadow: 2px 2px #000;
     font-family: varSity;
     margin-bottom: 5rem;
@@ -152,7 +152,7 @@ img {
     #main-home #main-heading span {
       display: block; }
       #main-home #main-heading span:nth-child(1) {
-        font-size: 3.5rem; }
+        font-size: 3rem; }
       #main-home #main-heading span:nth-child(3), #main-home #main-heading span:nth-child(4) {
         color: #e4360b;
         text-decoration: 1px underline #fff; }
@@ -519,7 +519,7 @@ img {
   align-items: flex-start; }
 
 #main-favorites #favorites-heading {
-  font-size: 5.5rem;
+  font-size: 5rem;
   padding-bottom: 2rem;
   color: #fffc33f3;
   text-shadow: 1px 1px #e4360b;
@@ -589,7 +589,7 @@ img {
   background: url(../img/pumpkin-bunny.jpeg) no-repeat center center/cover; }
 
 #main-qoutes #the-qoute {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #fff;
   padding: 2rem;
   max-width: 50rem;
@@ -681,7 +681,7 @@ img {
       white-space: none; }
   #main-qoutes .buttons-container {
     position: absolute;
-    bottom: 5rem;
+    bottom: 2rem;
     left: 0;
     right: 0; }
   #main-creat .form-qoutes-container form {
